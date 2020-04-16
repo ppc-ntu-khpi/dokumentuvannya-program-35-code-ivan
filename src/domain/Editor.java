@@ -1,4 +1,8 @@
 package domain;
+/**
+ * The class that represents Editor.
+ * For more information see {@link Artist}
+ */
 public class Editor extends Artist {
 
     public Editor(boolean electronicEditing, String[] skiils, String name, String jobTitle, int level, String dept) {
@@ -21,6 +25,10 @@ public class Editor extends Artist {
         this.electronicEditing = true;
     }
 
+    /**
+     * Method that returns information about employee editor
+     * @return String
+     */
     @Override
     public String toString() {
         String s=super.toString()+"\nEditing preferences= "; 
@@ -34,10 +42,18 @@ public class Editor extends Artist {
 
     private boolean electronicEditing;
 
+    /**
+     * Method you can use to check is editor prefer electronic editing
+     * @return boolean value
+     */
     public boolean getPreferences() {
         return electronicEditing;
     }
 
+    /**
+     * Method you can use to set editor preferences
+     * @param electronic true if editor prefer electronic editing
+     */
     public void setPreferences(boolean electronic) {
         this.electronicEditing=electronic;
     }

@@ -1,4 +1,8 @@
 package domain;
+/**
+ * The class that represents Employee in the position of Manager.
+ * For more information see {@link Employee}
+ */
 public class Manager extends Employee {
 
     public Manager(Employee[] employees, String name, String jobTitle, int level, String dept) {
@@ -6,6 +10,10 @@ public class Manager extends Employee {
         this.employees = employees;
     }
 
+    /**
+     * Method that returns information about manager as employee and his employees
+     * @return String
+     */
     @Override
     public String toString() {
         return super.toString()+"\nEmployees: "+getEmployees(); 
@@ -23,6 +31,10 @@ public class Manager extends Employee {
 
     private Employee[] employees;
 
+    /**
+     * Method that returns employees
+     * @return String with employees names
+     */
     public String getEmployees() {
         String s = "";
         for (Employee e : employees) {
@@ -32,10 +44,18 @@ public class Manager extends Employee {
         return s;
     }
 
+    /**
+     * Method you can use to set employees array for manager
+     * @param employees employees you want set for manager
+     */
     public void setEmployees(Employee[] employees) {
         this.employees=employees;
     }
 
+    /**
+     * Method that returns array of manager's employees
+     * @return array of Employee class objects
+     */
     public Employee[] getEmployeesList() {
         return employees;
     }
